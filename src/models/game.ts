@@ -6,16 +6,16 @@ export class Game{
 
     constructor(){
         for (let i = 1; i < 14; i++) {
-           this.stack.push('spade_'+i);
-           this.stack.push('hearts_'+i);
-           this.stack.push('clubs_'+i);
-           this.stack.push('diamonds_'+i);
+           this.stack.push('spade_' + i as string);
+           this.stack.push('hearts_' + i as string);
+           this.stack.push('clubs_' + i as string);
+           this.stack.push('diamonds_' + i as string);
         }
         shuffle(this.stack);
     }
 }
 
-function shuffle(array: any[]) {
+function shuffle(array: string[]) {
     let currentIndex = array.length,  randomIndex;
   
     // While there remain elements to shuffle.
