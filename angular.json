@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ringoffire": {
+    "ringoffireV2": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ringoffire",
+            "outputPath": "dist/ringoffire-v2",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -73,10 +73,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "ringoffire:build:production"
+              "browserTarget": "ringoffireV2:build:production"
             },
             "development": {
-              "browserTarget": "ringoffire:build:development"
+              "browserTarget": "ringoffireV2:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -84,7 +84,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ringoffire:build"
+            "browserTarget": "ringoffireV2:build"
           }
         },
         "test": {
@@ -105,19 +105,9 @@
             ],
             "scripts": []
           }
-        },
-        "deploy": {
-          "builder": "@angular/fire:deploy",
-          "options": {
-            "prerender": false,
-            "ssr": false,
-            "browserTarget": "ringoffire:build:production",
-            "firebaseProject": "ring-of-fire-6724b",
-            "firebaseHostingSite": "ring-of-fire-6724b"
-          }
         }
       }
     }
   },
-  "defaultProject": "ringoffire"
+  "defaultProject": "ringoffireV2"
 }
