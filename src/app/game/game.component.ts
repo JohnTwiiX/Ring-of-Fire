@@ -32,7 +32,7 @@ export class GameComponent implements OnInit {
         .doc(params['id'])
         .valueChanges()
         .subscribe((game: any) => {
-          console.log('Game update', game);
+          // console.log('Game update', game);
           this.game.currentPlayer = game.currentPlayer;
           this.game.playedCard = game.playedCard;
           this.game.players = game.players;
